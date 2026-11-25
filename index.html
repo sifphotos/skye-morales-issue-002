@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skye Morales · Issue 002</title>
+<meta name="description" content="creative deck for skye morales, delusion mag issue 002 exclusive photoshoot. 12.05.26, 4 to 6p, the atlanta treehouse, east point ga.">
+<link rel="icon" href="assets/k-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* chad lawson rust + black, delusion-scale type. layout: one long scroll, scene blocks of board | motion | copy | stills */
+  --black: #0b0b0b;
+  --ink: #141312;
+  --line: #2a2725;
+  --text: #f2efea;
+  --body: #d9d5ce;
+  --muted: #9a9690;
+  --rust: #b3381f;
+  --rust-d: #8f2a16;
+  --glow: #e06a52;
+  --display: "Archivo", "Arial Black", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --gut: clamp(16px, 3.2vw, 44px);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--black); color: var(--body); font-family: var(--mono); font-size: 14px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 var(--gut); }
+
+/* grain over everything */
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 90; background: url(assets/grain.svg); opacity: .09; mix-blend-mode: overlay; }
+
+/* progress */
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; background: var(--glow); transform-origin: 0 50%; transform: scaleX(0); z-index: 100; }
+
+/* nav */
+.nav { position: sticky; top: 0; z-index: 80; background: rgba(11,11,11,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; gap: 24px; height: 60px; }
+.nav .logo { width: 30px; height: 30px; flex: none; }
+.nav .word { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); font-size: 18px; letter-spacing: -.02em; text-decoration: none; white-space: nowrap; }
+.nav .links { display: flex; min-width: 0; gap: 18px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.nav .links::-webkit-scrollbar { display: none; }
+.nav .links a { text-decoration: none; color: var(--body); font-size: 12px; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+.nav .links a:hover { color: var(--text); }
+.badge { background: var(--rust); color: var(--text); font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 9px; }
+
+/* ticker */
+.ticker { background: var(--rust); color: var(--black); overflow: hidden; border-block: 1px solid var(--black); }
+.ticker .run { display: flex; width: max-content; animation: tick 60s linear infinite; }
+.ticker span { font-size: 12px; font-weight: 700; text-transform: lowercase; padding: 9px 0; white-space: nowrap; }
+.ticker i { font-style: normal; padding: 9px 22px; font-size: 8px; line-height: 2.6; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* type */
+.kick { font-size: 11px; color: var(--glow); text-transform: lowercase; letter-spacing: .02em; margin: 0 0 10px; }
+.h-mega, .h-sec, .h-scene, .tname { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); text-transform: lowercase; text-wrap: balance; margin: 0; }
+.h-mega { font-size: clamp(56px, 12.5vw, 196px); line-height: .86; letter-spacing: -.035em; }
+.h-sec { font-size: clamp(44px, 8vw, 128px); line-height: .9; letter-spacing: -.03em; }
+.h-scene { font-size: clamp(40px, 6.6vw, 104px); line-height: .9; letter-spacing: -.03em; }
+.tname { font-size: clamp(24px, 2.6vw, 36px); line-height: .95; letter-spacing: -.02em; }
+.lede { max-width: 62ch; font-size: 15px; color: var(--muted); margin: 26px 0 0; }
+.lede b { color: var(--text); font-weight: 700; }
+.body { margin: 0; max-width: 62ch; }
+.pill { position: absolute; left: 10px; top: 10px; background: var(--black); color: var(--text); font-size: 10px; padding: 3px 9px; border-radius: 99px; text-transform: lowercase; letter-spacing: .03em; }
+.pill.dim { color: var(--muted); }
+.chip { border: 1px solid var(--line); border-radius: 99px; padding: 2px 10px; font-size: 11px; color: var(--body); white-space: nowrap; }
+
+/* hero */
+.hero { position: relative; overflow: hidden; background:
+   radial-gradient(90% 70% at 0% 0%, rgba(179,56,31,.38) 0%, rgba(143,42,22,.14) 38%, transparent 68%),
+   radial-gradient(60% 50% at 100% 100%, rgba(143,42,22,.10) 0%, transparent 70%),
+   #0b0b0b; }
+.hero::before { content: ""; position: absolute; inset: 0; background: url(assets/grain.svg); opacity: .14; mix-blend-mode: overlay; pointer-events: none; }
+.hero .wrap { position: relative; padding-top: clamp(40px, 7vw, 96px); padding-bottom: clamp(32px, 5vw, 64px); }
+.hero .kick { color: var(--glow); }
+.hero .h-mega { color: var(--text); }
+.hero .sub { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 28px; color: var(--text); font-size: 13px; }
+.hero .sub span b { font-weight: 700; }
+.hero .film { margin-top: clamp(28px, 4vw, 52px); background: #000; padding: clamp(10px, 2.2vw, 28px) 0; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+.hero .film video, .hero .film img { width: 100%; aspect-ratio: 2.39 / 1; object-fit: cover; }
+.hero .credit { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; color: var(--text); font-size: 11px; opacity: .8; }
+
+/* section heads */
+.sec { padding: clamp(64px, 9vw, 140px) 0 0; }
+.sec-head { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 26px; margin-bottom: clamp(28px, 4vw, 48px); }
+.count { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: clamp(56px, 9vw, 140px); line-height: .8; color: transparent; -webkit-text-stroke: 1.5px var(--glow); }
+
+/* brief */
+.brief { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 5vw, 80px); }
+.brief p { margin: 0 0 16px; max-width: 60ch; }
+.brief .tag { font-family: var(--display); font-style: italic; font-weight: 800; font-stretch: 112%; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.1; color: var(--text); margin-bottom: 22px; text-transform: lowercase; }
+.stats { list-style: none; margin: 0; padding: 0; }
+.stat { display: flex; justify-content: space-between; align-items: end; gap: 16px; padding: 14px 0 12px; border-bottom: 1px solid var(--line); position: relative; }
+.sl { color: var(--text); display: flex; flex-direction: column; }
+.sl small { color: var(--muted); font-size: 11px; }
+.sv { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: clamp(26px, 3vw, 40px); color: var(--text); line-height: 1; white-space: nowrap; }
+
+/* team */
+.team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.tcard { background: var(--ink); border: 1px solid var(--line); border-left: 3px solid var(--rust); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; }
+.tphoto { aspect-ratio: 4/5; overflow: hidden; }
+.tphoto img { width: 100%; height: 100%; object-fit: cover; }
+.tbody { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 4px; margin-top: auto; }
+.handle { font-size: 12px; color: var(--muted); text-decoration: none; margin-top: 8px; }
+.handle:hover { color: var(--glow); }
+.tba { background: transparent; border: 1px dashed #3a3633; border-radius: 4px; padding: 18px; }
+.tba dl, .ccard dl { margin: 14px 0 0; display: grid; gap: 4px 0; font-size: 12px; }
+dt { color: var(--muted); font-size: 10px; text-transform: lowercase; margin-top: 6px; }
+dd { margin: 0; color: var(--body); }
+.note { grid-column: 1 / -1; display: flex; gap: 14px; align-items: center; padding: 16px 18px; background: var(--rust); color: var(--black); border-radius: 4px; font-weight: 700; font-size: 13px; }
+.note::before { content: "●"; font-size: 9px; }
+
+/* aesthetic */
+.aesthetic { columns: 4 220px; column-gap: 12px; }
+.pin { margin: 0 0 12px; break-inside: avoid; overflow: hidden; border-radius: 3px; }
+.pin img { width: 100%; }
+.rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); margin-top: 36px; }
+.rules div { padding: 18px 18px 18px 0; border-right: 1px solid var(--line); }
+.rules div + div { padding-left: 18px; }
+.rules div:last-child { border-right: 0; }
+.rules b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: 20px; color: var(--text); text-transform: lowercase; line-height: 1; margin-bottom: 8px; }
+
+/* cast */
+.cast { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.ccard .cimg { position: relative; aspect-ratio: 4/5; overflow: hidden; border-radius: 3px; margin-bottom: 14px; }
+.ccard .cimg img { width: 100%; height: 100%; object-fit: cover; }
+.palette { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; align-items: center; font-size: 11px; color: var(--muted); }
+.sw { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); }
+
+/* house */
+.house { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.room { margin: 0; }
+.room img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 3px; }
+.room:first-child { grid-column: span 2; grid-row: span 2; }
+.room:first-child img { aspect-ratio: auto; height: calc(100% - 46px); }
+.room figcaption { display: flex; flex-direction: column; padding-top: 8px; font-size: 11px; }
+.room b { color: var(--text); font-weight: 500; }
+.room span { color: var(--muted); }
+
+/* story */
+.story { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 80px); }
+.beats { list-style: none; margin: 0; padding: 0; counter-reset: b; }
+.beats li { counter-increment: b; display: grid; grid-template-columns: 36px 1fr; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.beats li::before { content: counter(b, decimal-leading-zero); color: var(--glow); font-size: 11px; padding-top: 2px; }
+.beats b { color: var(--text); font-weight: 500; }
+.sindex { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: clamp(40px, 6vw, 72px); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.sidx { text-decoration: none; padding: 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 12px; color: var(--body); display: flex; flex-direction: column; gap: 6px; transition: background .2s; }
+.sidx span { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: 28px; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--muted); transition: -webkit-text-stroke-color .2s, color .2s; }
+.sidx:hover { background: var(--ink); color: var(--text); }
+.sidx:hover span { color: var(--rust); -webkit-text-stroke-color: var(--rust); }
+
+/* divider */
+.divider { margin-top: clamp(80px, 10vw, 160px); background: radial-gradient(80% 120% at 0% 100%, rgba(179,56,31,.32) 0%, rgba(143,42,22,.10) 45%, transparent 75%), #0b0b0b; border-block: 1px solid var(--line); position: relative; overflow: hidden; }
+.divider::before { content: ""; position: absolute; inset: 0; background: url(assets/grain.svg); opacity: .14; mix-blend-mode: overlay; }
+.divider .wrap { position: relative; padding-top: clamp(40px, 6vw, 80px); padding-bottom: clamp(40px, 6vw, 80px); display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.divider .h-mega { color: var(--text); }
+.divider .kick { color: var(--glow); }
+.divider .dnum { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: clamp(64px, 12vw, 200px); line-height: .8; color: transparent; -webkit-text-stroke: 2px var(--text); opacity: .7; }
+
+/* scenes */
+.scene { padding-top: clamp(64px, 8vw, 120px); }
+.scene + .scene .shead { border-top: 1px solid var(--line); padding-top: clamp(28px, 4vw, 48px); }
+.shead { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 20px; }
+.num { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: clamp(72px, 11vw, 176px); line-height: .78; color: transparent; -webkit-text-stroke: 1.5px var(--glow); }
+.meta { display: flex; flex-wrap: wrap; gap: 14px 40px; margin: 24px 0 26px; padding: 14px 0; border-block: 1px solid var(--line); font-size: 12px; }
+.meta div { display: flex; flex-direction: column; gap: 4px; }
+.meta .k { color: var(--muted); font-size: 10px; }
+.meta .v { color: var(--text); }
+.meta .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.boards { display: grid; gap: 14px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.frame { margin: 0; position: relative; }
+.frame img, .frame video { width: 100%; aspect-ratio: 2.36 / 1; object-fit: cover; background: #000; border-radius: 2px; }
+.frame figcaption { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); padding-top: 7px; }
+.frame.noclip .flagnote { aspect-ratio: 2.36 / 1; border: 1px dashed #3a3633; display: flex; flex-direction: column; justify-content: center; padding: 22px; gap: 6px; font-size: 12px; }
+.flagnote b { color: var(--text); font-weight: 700; }
+.copy { display: grid; grid-template-columns: 1.2fr 1.2fr .9fr; gap: clamp(20px, 3vw, 44px); margin-top: 34px; }
+.shots { margin: 0; padding: 0; list-style: none; font-size: 12px; }
+.shots li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.shots li::before { content: "→ "; color: var(--glow); }
+.stills { margin-top: 40px; }
+.mocks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.mock { margin: 0; display: flex; flex-direction: row; gap: 8px; }
+.mock .mk, .mock .ref { flex: 1 1 0; min-width: 0; }
+.refgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+.refgrid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 3px; }
+.mk, .ref { position: relative; overflow: hidden; border-radius: 3px; }
+.mk img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.ref { width: 100%; }
+.ref img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.extra { margin-top: 22px; }
+.strip { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
+.strip img { height: 180px; width: auto; border-radius: 3px; flex: none; }
+
+.keyshot { display: flex; gap: 16px; align-items: center; background: var(--ink); border: 1px solid var(--line); border-left: 3px solid var(--glow); border-radius: 4px; padding: 14px 18px; margin: 0 0 18px; }
+.keyshot p { margin: 0; color: var(--text); font-size: 13px; }
+.ks-tag { flex: none; background: var(--glow); color: var(--black); font-size: 10px; font-weight: 700; text-transform: lowercase; padding: 3px 10px; border-radius: 99px; }
+.ksvis { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; max-width: 980px; margin: 0 0 22px; }
+.ksvis figure { margin: 0; position: relative; overflow: hidden; border-radius: 3px; }
+.ksvis .mk img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.ksvis .ref { width: 100%; }
+.ksvis .ref img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.macro { display: flex; gap: 14px; align-items: baseline; margin-top: 34px; padding: 12px 0; border-block: 1px dashed #3a3633; font-size: 12px; }
+.macro p { margin: 0; color: var(--text); }
+.mc-tag { flex: none; border: 1px solid var(--glow); color: var(--glow); font-size: 10px; padding: 2px 9px; border-radius: 99px; }
+.refnote { font-size: 11px; color: var(--muted); margin: 10px 0 0; display: flex; gap: 8px; align-items: baseline; }
+.refnote::before { content: "ref"; flex: none; border: 1px solid var(--line); border-radius: 99px; padding: 0 7px; font-size: 9px; color: var(--glow); }
+.banner { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; background: var(--ink); border: 1px solid var(--line); border-left: 3px solid var(--glow); border-radius: 4px; padding: 20px 22px; margin-top: 28px; }
+.banner b { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); font-size: 22px; line-height: 1; text-transform: lowercase; }
+.banner p { margin: 0; max-width: 70ch; }
+.edit-film { background: #000; border-radius: 3px; overflow: hidden; }
+.edit-film video { width: 100%; aspect-ratio: 16 / 9; }
+.beat { list-style: none; margin: 0; padding: 0; }
+.beat li { display: grid; grid-template-columns: 96px 1fr 1.4fr; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 12px; align-items: baseline; }
+.beat .tc { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--glow); font-size: 18px; white-space: nowrap; }
+.beat .sc { color: var(--text); }
+.beat .mv { color: var(--muted); }
+.musiccard { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; margin: 22px 0 30px; font-size: 12px; }
+.musiccard span b { color: var(--text); font-weight: 500; }
+.mustget { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin-top: 18px; }
+.mustget li { list-style: none; padding: 12px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 12px; display: grid; grid-template-columns: 44px 1fr; gap: 8px; }
+.mustget li span { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--glow); font-size: 18px; line-height: 1.1; }
+.mustget li.core span { color: var(--text); }
+@media (max-width: 760px) { .ksvis, .mustget { grid-template-columns: 1fr; } .beat li { grid-template-columns: 70px 1fr; } .beat .mv { grid-column: 2; } .banner { grid-template-columns: 1fr; } }
+
+.postcards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.pc { margin: 0; background: #efe7da; padding: 10px 10px 14px; border-radius: 2px; box-shadow: 0 18px 40px rgba(0,0,0,.45); color: #1b1714; }
+.pc:nth-child(odd) { transform: rotate(-1.2deg); }
+.pc:nth-child(even) { transform: rotate(.9deg); }
+.pcimg { position: relative; overflow: hidden; }
+.pcimg video { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: #000; }
+.stamp { position: absolute; top: 8px; right: 8px; background: #efe7da; padding: 5px 6px; border: 2px dashed #b3381f; transform: rotate(4deg); }
+.stamp img { width: 54px; height: auto; }
+.pc figcaption { display: flex; flex-direction: column; gap: 2px; padding-top: 10px; }
+.pcn { font-size: 10px; color: #6b625a; text-transform: lowercase; }
+.hand { font-family: "Caveat", cursive; font-size: 24px; line-height: 1.05; color: #b3381f; }
+.pcs { font-size: 10px; color: #6b625a; }
+@media (max-width: 1100px) { .postcards { grid-template-columns: repeat(2, 1fr); } }
+
+/* product */
+.product .wrap > .copy { grid-template-columns: 1fr 1fr; }
+.pack { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(20px, 4vw, 60px); align-items: center; margin-top: clamp(48px, 6vw, 90px); }
+.pack img { width: 100%; border-radius: 3px; }
+
+/* props */
+.props { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 60px); }
+.plist { list-style: none; margin: 0; padding: 0; }
+.plist li { display: grid; grid-template-columns: 1fr 1.2fr; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.plist.custom li { grid-template-columns: 22px 1fr 1.2fr; }
+.pn { color: var(--text); }
+.pd { color: var(--muted); }
+.flag { width: 20px; height: 20px; border-radius: 50%; background: var(--glow); color: var(--black); font-weight: 700; display: grid; place-items: center; font-size: 12px; animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(224,106,82,.18); } }
+.ptitle { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.ptitle h4 { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); font-size: clamp(26px, 3vw, 40px); margin: 0; text-transform: lowercase; line-height: 1; }
+.warn { background: var(--glow); color: var(--black); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 99px; white-space: nowrap; }
+
+/* run of show */
+.run { list-style: none; margin: 0; padding: 0; }
+.run li { display: grid; grid-template-columns: 110px 1fr 1.3fr; gap: 20px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.run .t { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: 26px; color: var(--glow); line-height: 1; }
+.run .w { font-family: var(--display); font-weight: 800; font-stretch: 112%; font-size: 17px; color: var(--text); text-transform: lowercase; }
+.run .d { color: var(--muted); font-size: 12px; }
+
+/* location */
+.loc { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 4vw, 60px); }
+.loc img { width: 100%; border-radius: 3px; }
+.addr { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); font-size: clamp(28px, 3.4vw, 48px); line-height: .95; text-transform: lowercase; margin: 0 0 18px; }
+.kv { display: grid; grid-template-columns: 110px 1fr; gap: 8px 16px; font-size: 12px; margin: 22px 0; }
+.kv span:nth-child(odd) { color: var(--muted); }
+.kv span:nth-child(even) { color: var(--text); }
+.btn { display: inline-flex; gap: 10px; align-items: center; padding: 11px 18px; border-radius: 99px; background: var(--rust); color: var(--text); text-decoration: none; font-size: 12px; font-weight: 700; }
+.btn:hover { background: var(--glow); color: var(--black); }
+
+/* footer */
+.foot { margin-top: clamp(80px, 10vw, 160px); border-top: 1px solid var(--line); }
+.foot .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 26px; padding-bottom: 40px; font-size: 11px; color: var(--muted); }
+.foot img { width: 28px; }
+.foot .big { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); font-size: clamp(56px, 13vw, 210px); line-height: .82; letter-spacing: -.035em; padding: 0 var(--gut); max-width: 1440px; margin: clamp(40px, 6vw, 80px) auto 0; text-transform: lowercase; }
+
+/* lightbox */
+.lb { position: fixed; inset: 0; z-index: 120; background: rgba(5,5,5,.94); display: none; place-items: center; padding: 24px; cursor: zoom-out; }
+.lb.on { display: grid; }
+.lb img { max-height: 92vh; max-width: 96vw; width: auto; object-fit: contain; }
+[data-zoom] { cursor: zoom-in; }
+
+/* motion, all of it optional */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rv { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+    @keyframes rise { from { transform: translateY(46px); opacity: .25; } to { transform: none; opacity: 1; } }
+    .num, .count, .dnum { animation: drift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+    @keyframes drift { from { transform: translateX(-4%); } to { transform: translateX(4%); } }
+    .hero .film { animation: sink linear both; animation-timeline: scroll(root); animation-range: 0 90vh; }
+    @keyframes sink { to { transform: translateY(-40px) scale(1.02); } }
+    .progress { animation: grow linear both; animation-timeline: scroll(root); }
+    @keyframes grow { to { transform: scaleX(1); } }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker .run, .flag { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .team { grid-template-columns: repeat(2, 1fr); }
+  .cast { grid-template-columns: repeat(3, 1fr); }
+  .house { grid-template-columns: repeat(3, 1fr); }
+  .sindex { grid-template-columns: repeat(4, 1fr); }
+  .copy { grid-template-columns: 1fr 1fr; }
+  .copy > div:last-child { grid-column: 1 / -1; }
+  .rules { grid-template-columns: 1fr 1fr; }
+  .rules div:nth-child(2) { border-right: 0; }
+  .rules div:nth-child(3) { padding-left: 0; }
+}
+@media (max-width: 760px) {
+  body { font-size: 13px; }
+  .nav .links { gap: 14px; }
+  .brief, .story, .props, .loc, .pack, .product .wrap > .copy { grid-template-columns: 1fr; }
+  .pair { grid-template-columns: 1fr; }
+  .copy { grid-template-columns: 1fr; }
+  .cast { grid-template-columns: 1fr 1fr; }
+  .house { grid-template-columns: 1fr 1fr; }
+  .team { grid-template-columns: 1fr; }
+  .sindex { grid-template-columns: repeat(2, 1fr); }
+  .run li { grid-template-columns: 80px 1fr; }
+  .run .d { grid-column: 2; }
+  .run .t { font-size: 20px; }
+  .rules { grid-template-columns: 1fr; }
+  .rules div { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0 !important; }
+  .mocks { grid-template-columns: 1fr; }
+  .refgrid { grid-template-columns: 1fr 1fr; }
+  .hero .credit { flex-direction: column; }
+}
+
+/* corner glow on every section: top-left + bottom-right, black stays dominant */
+.sec, .scene, footer { position: relative; background:
+  radial-gradient(80vw 55vh at 0% 0%, rgba(179,56,31,.2) 0%, rgba(143,42,22,.08) 45%, transparent 78%),
+  radial-gradient(75vw 50vh at 100% 100%, rgba(179,56,31,.15) 0%, rgba(143,42,22,.06) 45%, transparent 78%); }
+.hero { background:
+  radial-gradient(90% 70% at 0% 0%, rgba(179,56,31,.38) 0%, rgba(143,42,22,.14) 38%, transparent 68%),
+  radial-gradient(60% 60% at 100% 100%, rgba(179,56,31,.18) 0%, rgba(143,42,22,.06) 45%, transparent 72%),
+  #0b0b0b; }
+
+/* mobile polish */
+html, body { overflow-x: clip; }
+@media (max-width: 760px) {
+  .nav .word { display: none; }
+  .nav .wrap { gap: 14px; }
+  .nav .links { margin-left: 0; flex: 1; }
+  .team { grid-template-columns: 1fr 1fr; }
+  .tname { font-size: 22px; }
+  .num, .count { font-size: 54px; }
+  .dnum { font-size: 64px; }
+  .h-scene { font-size: 40px; }
+  .h-sec { font-size: 46px; }
+  .meta { gap: 10px 22px; }
+  .keyshot, .macro { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .postcards { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hand { font-size: 19px; }
+  .stamp img { width: 40px; }
+  .run li { gap: 4px 14px; }
+  .kv { grid-template-columns: 90px 1fr; }
+  .rules div { padding-right: 0; }
+  .sindex span { font-size: 22px; }
+}
+</style>
+<style>
+.latest { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: clamp(24px, 4vw, 60px); align-items: center; margin-top: clamp(48px, 6vw, 88px); padding-top: clamp(28px, 4vw, 48px); border-top: 1px solid var(--line); }
+.latest figure { margin: 0; }
+.latest img { width: 100%; border-radius: 6px; box-shadow: 0 30px 70px rgba(0,0,0,.5); background: #0b0b0b; }
+.latest p { max-width: 60ch; margin: 0 0 14px; }
+.latest .h-scene { margin-bottom: 18px; }
+@media (max-width: 760px) { .latest { grid-template-columns: 1fr; } }
+.tphoto { position: relative; }
+.hero .film { animation: none !important; transform: none !important; margin-top: clamp(32px, 4vw, 56px); }
+.team { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 1100px) { .team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tcard .tbody:only-child { min-height: 100%; justify-content: flex-end; padding-top: 60px; }
+.house .room img { aspect-ratio: 4/5; }
+.house .room:first-child { display: flex; flex-direction: column; }
+.house .room:first-child img { flex: 1 1 0; min-height: 0; height: auto; aspect-ratio: auto; }
+footer .big { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--text); font-size: clamp(56px, 13vw, 210px); line-height: .82; letter-spacing: -.035em; padding: 0 var(--gut); max-width: 1440px; margin: clamp(80px, 10vw, 160px) auto 0; text-transform: lowercase; }
+footer .foot { margin-top: clamp(32px, 4vw, 56px); }
+/* key shots */
+.kgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 18px; align-items: start; }
+.kcard { margin: 0; }
+.kcard .kimg { position: relative; overflow: hidden; border-radius: 3px; }
+.kcard .kimg img { width: 100%; }
+.khead { display: flex; align-items: end; gap: 14px; margin: 16px 0 10px; }
+.kn { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: 52px; line-height: .8; color: transparent; -webkit-text-stroke: 1.3px var(--glow); flex: none; }
+.kcard p { margin: 0; font-size: 12.5px; }
+.kcard.hero { grid-column: 1 / -1; max-width: 1100px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: end; }
+.kcard.hero .kn { font-size: 96px; }
+.kcard.hero p { font-size: 14px; color: var(--text); }
+.light { display: inline-block; margin-top: 12px; }
+/* wardrobe */
+.wgrid { columns: 5 180px; column-gap: 12px; }
+.wdirs { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); margin-top: 36px; }
+.wdirs div { padding: 18px 18px 18px 0; border-right: 1px solid var(--line); }
+.wdirs div + div { padding-left: 18px; }
+.wdirs div:last-child { border-right: 0; }
+.wdirs b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: 20px; color: var(--text); text-transform: lowercase; line-height: 1; margin-bottom: 8px; }
+@media (max-width: 1100px) { .kgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .wdirs { grid-template-columns: 1fr 1fr; } .wdirs div:nth-child(2) { border-right: 0; } .wdirs div:nth-child(3) { padding-left: 0; } }
+@media (max-width: 760px) {
+  .team { grid-template-columns: 1fr 1fr; }
+  .house .room:first-child { min-height: 420px; }
+  .sec-head > div { min-width: 0; } .h-sec { font-size: 38px; } .count { font-size: 44px; }
+  .kgrid { grid-template-columns: 1fr; } .kcard.hero { grid-column: auto; grid-template-columns: 1fr; gap: 0; } .kcard.hero .kn { font-size: 64px; }
+  .wdirs { grid-template-columns: 1fr; } .aesthetic, .wgrid { columns: 2; column-gap: 8px; } .pin { margin-bottom: 8px; } .wdirs div { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0 !important; }
+}
+</style>
+<style>
+/* intro: delusion mag welcomes skye morales, driven by scroll */
+.intro { --a:1; --b:1; --c:1; --d:1; --e:1; --f:1; --g:0; position: relative; height: 340vh; background:
+  radial-gradient(70% 60% at 0% 0%, rgba(179,56,31,.32) 0%, rgba(143,42,22,.1) 45%, transparent 75%),
+  radial-gradient(60% 50% at 100% 100%, rgba(179,56,31,.18) 0%, transparent 72%), #0b0b0b; }
+.stage { position: sticky; top: 60px; height: calc(100vh - 60px); height: calc(100svh - 60px); overflow: hidden; }
+.stage::before { content: ""; position: absolute; inset: 0; background: url(assets/grain.svg); opacity: .14; mix-blend-mode: overlay; pointer-events: none; z-index: 5; }
+.i-top { position: absolute; left: 50%; top: 50%; z-index: 4; text-align: center; width: min(82vw, 980px);
+  transform: translate(-50%, calc(-50% - var(--f) * 33vh)) scale(calc(1 - var(--f) * .55)); transform-origin: 50% 0; }
+.i-top img { width: 100%; height: auto; animation: dmin 1.2s cubic-bezier(.2,.7,.2,1) both .15s; }
+@keyframes dmin { from { opacity: 0; transform: translateY(28px) scale(.96); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@media (prefers-reduced-motion: reduce) { .i-top img { animation: none; } }
+.i-wel { font-family: var(--display); font-style: italic; font-weight: 900; font-stretch: 125%; color: var(--glow); text-transform: lowercase; letter-spacing: -.02em;
+  font-size: clamp(30px, 6vw, 84px); line-height: 1; margin: clamp(10px, 2vw, 22px) 0 0; opacity: var(--b); transform: translateY(calc((1 - var(--b)) * 30px)); }
+.i-photo { position: absolute; left: 50%; top: 53%; z-index: 2; height: min(56%, 620px); aspect-ratio: 566 / 668; transform: translate(-50%, -50%) scale(calc(1.08 - var(--c) * .08));
+  clip-path: inset(calc(50% - var(--c) * 50%) round 4px); box-shadow: 0 40px 90px rgba(0,0,0,.6); }
+.i-photo img { width: 100%; height: 100%; object-fit: cover; }
+.i-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(11,11,11,.75)); }
+.i-name { position: absolute; left: 0; right: 0; bottom: 13%; z-index: 3; margin: 0; text-align: center; font-size: clamp(54px, 12vw, 190px);
+  opacity: var(--d); transform: translateY(calc((1 - var(--d)) * 70px)); text-shadow: 0 10px 40px rgba(0,0,0,.5); }
+.i-meta { position: absolute; left: 0; right: 0; bottom: 6%; z-index: 3; text-align: center; color: var(--text); font-size: 12px; opacity: var(--e); padding: 0 var(--gut); }
+.i-meta b { color: var(--glow); font-weight: 700; }
+.i-cue { position: absolute; left: 50%; bottom: 5%; transform: translateX(-50%); z-index: 3; font-size: 11px; color: var(--muted); opacity: calc(1 - var(--g)); }
+.i-cue::after { content: ""; display: block; width: 1px; height: 34px; margin: 10px auto 0; background: linear-gradient(var(--glow), transparent); }
+@media (prefers-reduced-motion: reduce) { .intro { height: auto; } .stage { position: relative; top: 0; height: calc(100svh - 60px); } .i-cue { display: none; } }
+.nav .dm { height: 22px; width: auto; opacity: .95; }
+.nav .x { color: var(--muted); font-size: 12px; }
+.foot .marks { display: flex; align-items: center; gap: 16px; }
+.foot .marks .dmw { width: 150px; }
+.foot .marks img { width: 28px; }
+@media (max-width: 760px) { .i-photo { height: 50%; top: 50%; } .i-name { bottom: 14%; } .nav .dm { height: 18px; } }
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="sections">
+  <div class="wrap">
+    <img class="logo" src="assets/k-logo.png" alt="chad lawson photography"><span class="x">×</span><img class="dm" src="assets/dm-mark.png" alt="delusion mag">
+    <a class="word" href="#welcome">skye morales · issue 002</a>
+    <div class="links">
+      <a href="#brief">brief</a><a href="#team">team</a><a href="#aesthetic">aesthetic</a><a href="#location">location</a><a href="#keyshots">key shots <span class="badge">09</span></a><a href="#wardrobe">wardrobe</a><a href="#props">props</a><a href="#day">the day</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro" id="welcome" aria-label="delusion mag welcomes skye morales">
+  <div class="stage">
+    <div class="i-top"><img src="assets/delusion-wordmark.png" alt="delusion mag"><p class="i-wel">welcomes</p></div>
+    <div class="i-photo"><img src="assets/team_skye.jpg" alt="skye morales"></div>
+    <h1 class="i-name h-mega">skye morales.</h1>
+    <p class="i-meta"><b>issue 002</b> · magazine exclusive photoshoot · 12.05.26 · the atlanta treehouse</p>
+    <p class="i-cue">scroll</p>
+  </div>
+</section>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="kick">delusion mag × chad lawson photography · creative deck · issue 002 magazine exclusive photoshoot</p>
+    <h2 class="h-mega">in her<br>zone.</h2>
+    <div class="sub">
+      <span><b>skye morales</b> · issue 002 exclusive</span>
+      <span><b>words</b> · imani brown</span>
+      <span><b>12.05.26</b> · 4 – 6p</span>
+      <span><b>east point, ga</b> · the atlanta treehouse</span>
+    </div>
+    <div class="film">
+      <img src="img/hero_house.jpg" alt="the atlanta treehouse at night" style="aspect-ratio:3/2;max-height:82vh" data-zoom>
+    </div>
+    <div class="credit"><span>the treehouse after dark</span><span>photos chad lawson · words imani brown</span></div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div class="run">
+<span>skye morales</span><i>●</i><span>issue 002</span><i>●</i><span>in her zone</span><i>●</i><span>moodygirl</span><i>●</i><span>12.05.26</span><i>●</i><span>4 – 6p</span><i>●</i><span>the treehouse</span><i>●</i><span>9 key shots</span><i>●</i><span>sunset 5:30</span><i>●</i>
+<span>skye morales</span><i>●</i><span>issue 002</span><i>●</i><span>in her zone</span><i>●</i><span>moodygirl</span><i>●</i><span>12.05.26</span><i>●</i><span>4 – 6p</span><i>●</i><span>the treehouse</span><i>●</i><span>9 key shots</span><i>●</i><span>sunset 5:30</span><i>●</i>
+</div></div>
+
+<main>
+<section class="sec" id="brief">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">01 · project brief</p><h2 class="h-sec">the brief.</h2></div><div class="count" aria-hidden="true">01</div></div>
+    <div class="brief">
+      <div class="rv">
+        <p class="tag">skye in her zone, up in the trees.</p>
+        <p>a delusion mag exclusive for issue 002. these photos run with the feature built from skye's interview with imani brown, our lead journalist and executive editor. the pictures should feel like the same story skye tells imani.</p>
+        <p>skye making music, shot like an editorial. not a studio session and not bts. a girl with a little piano, a mic and her headphones, so locked in she forgot we were there.</p>
+        <p>the board is moodygirl. girls on the floor of their own rooms with the gear spread out around them. cables everywhere, keys, records, a laptop glowing, headphones half on. warm lamp light or a hard flash, a little grain, skin that looks real. the attitude is the whole thing: bored, cool, in her head. and when she finally looks at you, it hits.</p>
+        <p>we're shooting inside and outside the treehouse. inside, the little room is already halfway there: zebra print, pink, a big rug, skylights. outside, the rug goes down in the leaves, the piano sits on the deck, the mic stand goes in the dirt by the stairs. the treehouse is the free part, the gear and the styling are the moody part. it should feel like skye built her own studio up in the trees.</p>
+        <p>sun's down around 5:30. outside while we have light, then we move inside and the flash comes out for the night frames.</p>
+      </div>
+      <ul class="stats">
+        <li class="stat rv"><span class="sl">shoot<small>saturday 12.05.26</small></span><span class="sv">4 – 6p</span></li>
+        <li class="stat rv"><span class="sl">sunset<small>outside first, inside + flash after</small></span><span class="sv">~5:30p</span></li>
+        <li class="stat rv"><span class="sl">key shots<small>hero is the treehouse at night</small></span><span class="sv">09</span></li>
+        <li class="stat rv"><span class="sl">the room<small>small inside, keep it tight</small></span><span class="sv">130 sq ft</span></li>
+      </ul>
+    </div>
+    <div class="latest rv">
+      <figure><img src="img/unimpressed.jpg" alt="unimpressed ep cover" loading="lazy" decoding="async" data-zoom></figure>
+      <div>
+        <p class="kick">her latest · out 11.13.26 · 6 songs</p>
+        <h3 class="h-scene">unimpressed.</h3>
+        <p>the new ep. the cover is the bridge into this shoot: leopard fur, white tights, big curls, framed in a photo booth window like she shot it herself in her room. that's the same moodygirl energy we're building on.</p>
+        <p>so this is the same girl, three weeks later, in her own little studio up in the trees. still unimpressed. "shooting herself" (key shot 05) and the leopard in the wardrobe both nod back to the cover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="team">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">02 · the team</p><h2 class="h-sec">the team.</h2></div><div class="count" aria-hidden="true">02</div></div>
+    <div class="team">
+      <article class="tcard rv"><div class="tphoto"><img src="assets/team_chad.jpg" alt="chad lawson" loading="lazy" decoding="async" data-zoom></div><div class="tbody"><p class="kick">photographer</p><h4 class="tname">chad lawson</h4><a class="handle" href="https://www.instagram.com/chadlawsonphotos/">@chadlawsonphotos</a></div></article>
+      <article class="tcard rv"><div class="tphoto"><img src="assets/team_skye.jpg" alt="skye morales" style="object-position:50% 30%" loading="lazy" decoding="async" data-zoom></div><div class="tbody"><p class="kick">talent · singer</p><h4 class="tname">skye morales</h4><a class="handle" href="https://www.instagram.com/skyemorales/">@skyemorales</a></div></article>
+      <article class="tcard rv"><div class="tphoto"><img src="assets/team_kaylyn.jpg" alt="kaylyn" loading="lazy" decoding="async" data-zoom></div><div class="tbody"><p class="kick">management</p><h4 class="tname">kaylyn</h4><a class="handle" href="https://www.instagram.com/realbossladyk/">@realbossladyk</a></div></article>
+      <article class="tcard rv"><div class="tphoto"><img src="assets/team_christine.jpg" alt="toso christine" loading="lazy" decoding="async" data-zoom><span class="pill dim">confirming</span></div><div class="tbody"><p class="kick">wardrobe stylist</p><h4 class="tname">christine</h4><a class="handle" href="https://www.instagram.com/tosochristine/">@tosochristine</a></div></article>
+      <article class="tcard rv"><div class="tphoto"><img src="assets/team_o.jpg" alt="oseremi" style="object-position:40% 40%" loading="lazy" decoding="async" data-zoom><span class="pill dim">confirming</span></div><div class="tbody"><p class="kick">makeup</p><h4 class="tname">oseremi "o"</h4><a class="handle" href="https://www.instagram.com/glambyoseremi/">@glambyoseremi</a></div></article>
+      </div>
+  </div>
+</section>
+
+<section class="sec" id="aesthetic">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">03 · moodygirl, in the trees</p><h2 class="h-sec">the aesthetic.</h2></div><div class="count" aria-hidden="true">03</div></div>
+    <p class="lede rv" style="margin:0 0 32px"><b>bedroom producer energy, in a treehouse.</b> floors, rugs, cords and keys. somebody's room at 2am, tungsten warm, or a hard on-camera flash that flattens everything and makes it feel like a disposable. white tees and crew socks next to sheer black tights. treehouses, stairs, a lamp and a chair sitting in the middle of the woods. free and a little wild, but she's still the coolest person here.</p>
+    <div class="aesthetic"><figure class="pin rv"><img src="img/m_95913cf1.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_92d26ba6.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_1bda2cee.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_47a2cba3.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_2d388c5d.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_3f95743e.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_6ae299d1.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_de725240.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_929e6bfe.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_0e28dd2d.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_848eb37a.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_221865a6.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_ac55e643.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_1a1feb25.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_49cf8a83.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_0fa3bd41.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_2f65c443.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_b7da8e41.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_edf8c541.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_008a88fe.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_f5400e04.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_a1f42a1b.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_7815741b.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/m_d3bc1e2e.jpg" alt="board reference" loading="lazy" decoding="async" data-zoom></figure></div>
+    <p class="refnote">board pulls for mood. we're borrowing the feeling, not copying anybody's shot.</p>
+    <div class="rules rv">
+      <div><b>in her zone</b>eyes on the keys, the mic or nowhere. she looks in the lens maybe once, and it counts.</div>
+      <div><b>gear in frame</b>piano, mic, headphones or a cable in every shot. the music is the story.</div>
+      <div><b>inside + out</b>the room for the floor and daybed frames. the stairs, deck and yard for the free ones.</div>
+      <div><b>warm, then flash</b>golden light while it lasts. after 5:30 it's direct flash and the string lights.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="location">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">04 · location</p><h2 class="h-sec">the treehouse.</h2></div><div class="count" aria-hidden="true">04</div></div>
+    <p class="lede rv" style="margin:0 0 32px"><b>the atlanta treehouse escape, east point.</b> a treehouse on 2.4 wooded acres. we're shooting inside and out. outside: the stairs around the trunk, the deck, the yard and the string lights at night. inside: one small room, loud with color. zebra print, pink, sage walls, a big rug and a daybed.</p>
+    <div class="house">
+      <figure class="room rv"><img src="img/night_ext.jpg" alt="treehouse at night" style="object-position:50% 55%" loading="lazy" decoding="async" data-zoom><figcaption><b>after dark</b><span>string lights on the stairs · after 5:30</span></figcaption></figure>
+      <figure class="room rv"><img src="img/day_ext.jpg" alt="treehouse in daylight" loading="lazy" decoding="async" data-zoom><figcaption><b>the treehouse</b><span>stairs + deck · daylight</span></figcaption></figure>
+      <figure class="room rv"><img src="img/room_wide.jpg" alt="the room" loading="lazy" decoding="async" data-zoom><figcaption><b>the room</b><span>skylights · rug · daybed</span></figcaption></figure>
+      <figure class="room rv"><img src="img/zebra_wall.jpg" alt="zebra wall" loading="lazy" decoding="async" data-zoom><figcaption><b>zebra wall</b><span>pink frame · lip pillow</span></figcaption></figure>
+      <figure class="room rv"><img src="img/gallery_wall.jpg" alt="gallery wall" loading="lazy" decoding="async" data-zoom><figcaption><b>gallery wall</b><span>sage + zebra print</span></figcaption></figure>
+      <figure class="room rv"><img src="img/room_bed.jpg" alt="daybed" loading="lazy" decoding="async" data-zoom><figcaption><b>the daybed</b><span>window light</span></figcaption></figure>
+      <figure class="room rv"><img src="img/door_corner.jpg" alt="door corner" loading="lazy" decoding="async" data-zoom><figcaption><b>the door</b><span>stump table · art</span></figcaption></figure>
+      <figure class="room rv"><img src="img/detail.jpg" alt="details" loading="lazy" decoding="async" data-zoom><figcaption><b>details</b><span>green drapes · white deer</span></figcaption></figure>
+    </div>
+    <p class="refnote">location photos are from the peerspace listing.</p>
+  </div>
+</section>
+
+<section class="sec" id="keyshots">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">05 · key shots</p><h2 class="h-sec">the must gets.</h2></div><div class="count" aria-hidden="true">05</div></div>
+    <p class="lede rv" style="margin:0 0 36px"><b>nine frames, inside and out.</b> the note under each ref is how we do it at the treehouse. outside ones go first while we have light, inside and after dark ones go last.</p>
+    <div class="kgrid"><figure class="kcard hero rv"><div class="kimg"><img src="img/m_2d388c5d.jpg" alt="under the treehouse" loading="lazy" decoding="async" data-zoom><span class="pill">key shot · hero</span></div><figcaption><div class="khead"><span class="kn">01</span><h4 class="tname">under the treehouse</h4></div><p>the one that says where we are. treehouse lit up above her, direct flash, skye mid step on the dirt in something light that moves. the woods go black behind her.</p><span class="chip light">outside · after dark</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_6ae299d1.jpg" alt="the session" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">02</span><h4 class="tname">the session</h4></div><p>straight down on her at the keys on the treehouse deck. back to us, headphones on, laptop glowing, cables running off the boards. she doesn't know we're there.</p><span class="chip light">outside · daylight</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_0fa3bd41.jpg" alt="the floor" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">03</span><h4 class="tname">the floor</h4></div><p>inside on the big rug. skye sitting in the middle of it with the piano, the mic and the headphones around her. shot from above, she looks up.</p><span class="chip light">inside</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_92d26ba6.jpg" alt="in between takes" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">04</span><h4 class="tname">in between takes</h4></div><p>laid out on the rug inside in a big white tee and white socks, chin in her hand, the keys in front of her. low angle, right on the floor with her.</p><span class="chip light">inside</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_221865a6.jpg" alt="shooting herself" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">05</span><h4 class="tname">shooting herself</h4></div><p>on her back on the daybed with the piano above her head, arm up taking her own picture. hair everywhere, tongue out, a little bit of a brat.</p><span class="chip light">inside · daybed</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_b7da8e41.jpg" alt="eyes closed" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">06</span><h4 class="tname">eyes closed</h4></div><p>straight overhead. flat on a rug out in the leaves, headphones on, eyes closed, hands on her chest. the gear laid out around her like a frame. leaf shadows if the sun gives them to us.</p><span class="chip light">outside · last light</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_f5400e04.jpg" alt="the take" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">07</span><h4 class="tname">the take</h4></div><p>inside, lens on the floor. she's on her back singing into the mic, headphones on, cord running across her. this is the "in her zone" frame.</p><span class="chip light">inside · after dark</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_95913cf1.jpg" alt="the flip" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">08</span><h4 class="tname">the flip</h4></div><p>face down on the rug inside with records spread around her, then the same frame flipped in post into a mirror. the editorial one.</p><span class="chip light">inside</span></figcaption></figure><figure class="kcard rv"><div class="kimg"><img src="img/m_1bda2cee.jpg" alt="the look" loading="lazy" decoding="async" data-zoom></div><figcaption><div class="khead"><span class="kn">09</span><h4 class="tname">the look</h4></div><p>sitting on the floor against the zebra wall or out on the stairs, legs out, and for once she looks dead in the lens. cool, unbothered.</p><span class="chip light">inside or out</span></figcaption></figure></div>
+    <p class="refnote">refs are references, not exact. if we lose the light, we cut extras before we cut these.</p>
+  </div>
+</section>
+
+<section class="sec" id="wardrobe">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">06 · wardrobe</p><h2 class="h-sec">what she wears.</h2></div><div class="count" aria-hidden="true">06</div></div>
+    <p class="lede rv" style="margin:0 0 32px"><b>moodygirl, first and always.</b> dark, a little undone, a little dangerous. little tops, sheer black tights, a lot of leg, hair doing whatever it wants. sexy but not trying, like she got dressed for herself and the session ran late. the cozy pieces only show up to make the moody ones hit harder.</p>
+    <div class="wgrid"><figure class="pin rv"><img src="img/w_7805577d.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_e90794b9.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_da5c2fa8.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_875a3b46.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_b93611d1.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_4a5b893e.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_ffe893f4.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_a1e0ca00.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure><figure class="pin rv"><img src="img/w_b2d3622e.jpg" alt="wardrobe reference" loading="lazy" decoding="async" data-zoom></figure></div>
+    <div class="wdirs rv">
+      <div><b>moodygirl</b>the base of everything. black bralette or a little knit top, sheer black tights, pointed heels or a long low skirt.</div>
+      <div><b>the session fit</b>oversized white tee or a baby tee, white crew socks, low sweats. thrown over the moody piece, never instead of it.</div>
+      <div><b>a print</b>leopard like the unimpressed cover, polka dot or zebra. zebra plays right off the wall inside the treehouse.</div>
+      <div><b>face + hair</b>smudgy eye, real skin, hair big and wild or slicked back. the face does half the moody work.</div>
+    </div>
+    <div class="banner rv"><b>bring layers.</b><p>these refs are for the feel, not exact pieces. bring a few options and we'll pick on the day. it's december and it gets cold fast once the sun's gone, so bring a coat or a blanket for between shots.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="props">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">07 · props</p><h2 class="h-sec">the gear.</h2></div><div class="count" aria-hidden="true">07</div></div>
+    <div class="props">
+      <div class="rv">
+        <div class="ptitle"><h4>we have</h4></div>
+        <ul class="plist">
+          <li><span class="pn">small piano / keys</span><span class="pd">the hero prop. the deck, the rug, the overheads</span></li>
+          <li><span class="pn">mic + stand</span><span class="pd">the take, the stairs, the night frames</span></li>
+          <li><span class="pn">headphones</span><span class="pd">on her in almost every shot</span></li>
+          <li><span class="pn">recording gear</span><span class="pd">interface, laptop, cables. let the cables run, they're set dressing</span></li>
+          <li><span class="pn">skye's own instruments</span><span class="pd">if she plays anything, bring it. her own gear makes it personal</span></li>
+        </ul>
+      </div>
+      <div class="rv">
+        <div class="ptitle"><h4>would help</h4></div>
+        <ul class="plist">
+          <li><span class="pn">a rug</span><span class="pd">for the ground shots. half the key shots live on it</span></li>
+          <li><span class="pn">a few records</span><span class="pd">for the flip</span></li>
+          <li><span class="pn">charged laptop</span><span class="pd">screen on for the glow, no outlet in the yard</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="day">
+  <div class="wrap">
+    <div class="sec-head rv"><div><p class="kick">08 · the day · 12.05.26</p><h2 class="h-sec">get there.</h2></div><div class="count" aria-hidden="true">08</div></div>
+    <div class="loc">
+      <div class="rv"><img src="img/day_ext.jpg" alt="the atlanta treehouse" loading="lazy" decoding="async" data-zoom></div>
+      <div class="rv">
+        <p class="addr">the atlanta treehouse<br>east point, ga</p>
+        <div class="kv">
+          <span>date</span><span>saturday 12.05.26</span>
+          <span>start</span><span>4:00p</span>
+          <span>wrap</span><span>6:00p</span>
+          <span>light</span><span>sunset around 5:30. outside first, inside + flash after</span>
+          <span>address</span><span>2395 dodson drive, unit 1 (treehouse)<br>east point, ga 30344</span>
+          <span>on site</span><span>parking, restroom, dressing room</span>
+        </div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=2395+Dodson+Drive+Unit+1,+East+Point,+GA+30344">directions →</a> <a class="btn" style="background:transparent;border:1px solid var(--line)" href="https://www.peerspace.com/pages/listings/6ad5a6e6c7f352302d904448">view the listing →</a>
+      </div>
+    </div>
+    <div class="banner rv"><b>heads up.</b><p>the listing caps it at 4 people on the property, so no extra guests. refs in this deck are references, not exact, and the shot list can get cut on the day if we lose the light.</p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="big">see you on the 5th.</p>
+  <div class="foot"><div class="wrap"><span>DELUSION MAG · SKYE MORALES · ISSUE 002 · CREATIVE DECK</span><span class="marks"><img class="dmw" src="assets/delusion-wordmark.png" alt="delusion mag"><img src="assets/k-logo.png" alt="chad lawson photography"></span></div></div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="image preview"><img alt=""></div>
+<script>
+(() => {
+  const lb = document.getElementById('lb'), li = lb.querySelector('img');
+  document.addEventListener('click', ev => {
+    const t = ev.target.closest('[data-zoom]');
+    if (t) { li.src = t.currentSrc || t.src; li.alt = t.alt; lb.classList.add('on'); return; }
+    if (ev.target.closest('#lb')) lb.classList.remove('on');
+  });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape') lb.classList.remove('on'); });
+})();
+</script>
+<script>
+(() => {
+  const intro = document.querySelector('.intro');
+  if (!intro || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const r = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
+  let raf = 0;
+  const upd = () => {
+    raf = 0;
+    const total = intro.offsetHeight - innerHeight;
+    const p = total > 0 ? Math.min(1, Math.max(0, -intro.getBoundingClientRect().top / total)) : 1;
+    const v = { a: 1, b: r(p, .06, .2), f: r(p, .24, .44), c: r(p, .32, .62), d: r(p, .5, .7), e: r(p, .68, .82), g: r(p, 0, .06) };
+    for (const k in v) intro.style.setProperty('--' + k, v[k].toFixed(3));
+  };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(upd); }, { passive: true });
+  addEventListener('resize', upd);
+  upd();
+})();
+</script>
+</body>
+</html>
